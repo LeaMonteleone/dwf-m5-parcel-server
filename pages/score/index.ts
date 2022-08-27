@@ -45,7 +45,7 @@ export function initScore(params) {
         background.classList.remove("win");
         background.classList.remove("loose");
         background.classList.remove("tie");
-        params.goTo("/instructions")
+        params.goTo("/dwf-m5-parcel-server/instructions")
     });
     return div;
 }

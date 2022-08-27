@@ -6,21 +6,24 @@ import { initScore } from "../pages/score";
 /*Router */
 
 export function initRouter(container) {
-    const routes = [
+
+    const basePath = "/dwf-m5-parcel-server";
+
+      const routes = [
       {
-        path: /\/welcome/,
+        path: /\/dwf-m5-parcel-server\/welcome/,
         page: initWelcome,
       },
       {
-        path: /\/instructions/,
+        path: /\/dwf-m5-parcel-server\/instructions/,
         page: initInstructions,
       },
       {
-        path: /\/game/,
+        path: /\/dwf-m5-parcel-server\/game/,
         page: initGame,
       },
       {
-        path: /\/score/,
+        path: /\/dwf-m5-parcel-server\/score/,
         page: initScore,
       }
       
@@ -50,8 +53,8 @@ export function initRouter(container) {
     }
   }
   /*Always initialices in welcome page*/
-  if (location.pathname == "/") {
-    goTo("/welcome")
+  if (location.host.includes("leamonteleone.github.io")) {
+    goTo("/dwf-m5-parcel-server/welcome")
   } else {
     handleRoute(location.pathname)
   }

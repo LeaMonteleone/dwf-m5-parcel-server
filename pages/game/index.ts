@@ -27,7 +27,7 @@ export function initGame(params) {
         console.log (counter)
         if (counter==0) {
             clearInterval(countDown);
-            params.goTo("/instructions")
+            params.goTo("/dwf-m5-parcel-server/instructions")
         }
     }, 1500);
     
@@ -59,7 +59,7 @@ export function initGame(params) {
             }, 1500);
 
             setTimeout(() => {
-               params.goTo("/score");
+               params.goTo("/dwf-m5-parcel-server/score");
 
            }, 4500); 
             

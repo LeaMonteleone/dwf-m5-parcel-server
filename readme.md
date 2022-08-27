@@ -1,1 +1,1 @@
-https://leamonteleone.github.io/dwf-m5-parcel-server/welcome
+https://leamonteleone.github.io/dwf-m5-parcel-server

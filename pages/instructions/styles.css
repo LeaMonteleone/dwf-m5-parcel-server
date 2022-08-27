@@ -1,0 +1,9 @@
+.start-game {
+  width: 100%;
+}
+
+.instructions {
+  font-family: "Sen", sans-serif;
+  font-size: 2em;
+  margin-top: 3em;
+}

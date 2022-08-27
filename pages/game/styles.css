@@ -1,0 +1,35 @@
+.off {
+  display: none !important;
+}
+
+.on {
+  display: inherit;
+}
+
+.fight {
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rotate {
+  transform: rotateX(180deg);
+}
+
+.choosen {
+  cursor: pointer;
+}
+
+.big {
+  position: relative;
+  bottom: 200px;
+}
+
+.counter {
+  font-family: "Luckiest Guy", cursive;
+  color: cornflowerblue;
+  font-size: 7em;
+  margin-top: 2em;
+}

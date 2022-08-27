@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+}
+
+.start {
+  width: 70%;
+}
+.title {
+  font-family: "Luckiest Guy", cursive;
+  color: cornflowerblue;
+  font-size: 3em;
+  margin-top: 1em;
+}
+.hands-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.root {
+  background-image: url(../../img/fondo.png);
+  background-repeat: repeat;
+  background-blend-mode: multiply;
+}

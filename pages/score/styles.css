@@ -1,0 +1,32 @@
+.win {
+  background-color: greenyellow;
+}
+
+.loose {
+  background-color: crimson;
+}
+
+.tie {
+  background-color: gray;
+}
+
+.container > img {
+  margin-top: 2em;
+}
+
+.score-board {
+  font-family: "Sen", sans-serif;
+  max-width: 500px;
+  width: 100%;
+  background-color: white;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.score-board > h2 {
+  margin-bottom: 0.5em;
+}
+.return {
+  margin-bottom: 3em;
+}

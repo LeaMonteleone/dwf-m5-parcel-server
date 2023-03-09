@@ -101,12 +101,29 @@ export const state = {
     }
 
     this.savedData();
- },
+    },
 
- savedData() {
-    const currentState = this.getState().history;
-    localStorage.setItem("data", JSON.stringify(currentState));
- },
+    savedData() {
+        const currentState = this.getState().history;
+        localStorage.setItem("data", JSON.stringify(currentState));
+    },
+
+    cleanData() {
+        localStorage.setItem(
+        "data",
+        JSON.stringify({
+            myScore: 0,
+            pcScore: 0,
+        })
+        );
+    },
+
+    getStorage() {
+        const localData = JSON.parse(localStorage.getItem("data") as string);
+        if (localStorage.getItem("data")) {
+           this.data.history = localData;
+        }
+     }
 
 
 }

@@ -19,7 +19,8 @@ export function initWelcome(params) {
     
     const button = div.querySelector(".start");
     button.addEventListener ("click", (el) => {
-        params.goTo("/dwf-m5-parcel-server/instructions");
+        params.goTo("/instructions");
+        //params.goTo("/dwf-m5-parcel-server/instructions");
     });
     return div
 }

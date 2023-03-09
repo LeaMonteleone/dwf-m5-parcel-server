@@ -27,7 +27,8 @@ export function initGame(params) {
         console.log (counter)
         if (counter==0) {
             clearInterval(countDown);
-            params.goTo("/dwf-m5-parcel-server/instructions")
+            params.goTo("/instructions")
+            //params.goTo("/dwf-m5-parcel-server/instructions")
         }
     }, 1500);
     
@@ -50,18 +51,21 @@ export function initGame(params) {
             state.setMove(move, pcMove);
 
             
+            
             setTimeout(() => {
                 container.classList.add("off");
                 const newDiv = document.querySelector(".fight");
+                newDiv.classList.add("vr");
                 newDiv.innerHTML = `<custom-play class="rotate" value="${pcMove}"></custom-play>
                <custom-play value="${move}"></custom-play>`
 
-            }, 1500);
+            }, 1000);
 
             setTimeout(() => {
+                //params.goTo("/score");
                params.goTo("/dwf-m5-parcel-server/score");
 
-           }, 4500); 
+           }, 3500); 
             
 
                

@@ -11,19 +11,20 @@ export function initRouter(container) {
 
       const routes = [
       {
-        path: /\/dwf-m5-parcel-server\/welcome/,
+        path: /\/welcome/,
+        //path: /\/dwf-m5-parcel-server\/welcome/,
         page: initWelcome,
       },
-      {
-        path: /\/dwf-m5-parcel-server\/instructions/,
+      {path: /\/instructions/,
+        //path: /\/dwf-m5-parcel-server\/instructions/,
         page: initInstructions,
       },
-      {
-        path: /\/dwf-m5-parcel-server\/game/,
+      {path: /\/game/,
+        //path: /\/dwf-m5-parcel-server\/game/,
         page: initGame,
       },
-      {
-        path: /\/dwf-m5-parcel-server\/score/,
+      {path: /\/score/,
+        //path: /\/dwf-m5-parcel-server\/score/,
         page: initScore,
       }
       
@@ -52,12 +53,24 @@ export function initRouter(container) {
       
     }
   }
-  /*Always initialices in welcome page*/
+
+   //Always initialices in welcome page
+   if (location.pathname == "/") {
+    goTo("/welcome")
+  } else {
+    handleRoute(location.pathname) 
+  }
+  
+
+  
+  /*Always initialices in welcome page 
   if (location.host.includes("leamonteleone.github.io")) {
     goTo("/dwf-m5-parcel-server/welcome")
   } else {
+    console.log (location.pathname)
     handleRoute(location.pathname)
   }
+*/
   
   /**/
   window.onpopstate = function() {

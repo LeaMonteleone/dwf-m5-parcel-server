@@ -1,4 +1,7 @@
+import { state } from "../../src/state";
+state.getStorage();
 export function initInstructions(params) {
+
     const div = document.createElement("div");
     div.innerHTML = `
     <div class="container">
@@ -15,6 +18,7 @@ export function initInstructions(params) {
     
     const startButton = div.querySelector(".start-game");
     startButton.addEventListener("click", el => {
+        //params.goTo("/game")
         params.goTo("/dwf-m5-parcel-server/game");
     });
     return div;

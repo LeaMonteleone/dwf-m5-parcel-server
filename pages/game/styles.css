@@ -7,11 +7,14 @@
 }
 
 .fight {
-  height: 100vh;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.vh {
+  height: 100vh;
 }
 
 .rotate {

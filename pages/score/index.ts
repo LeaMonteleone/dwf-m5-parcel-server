@@ -2,6 +2,7 @@ const winForm = require("../../img/win.png");
 const looseForm = require("../../img/loose.png");
 const tieForm = require("../../img/tie.png");
 
+import { disconnect } from "process";
 import { state } from "../../src/state";
 
 export function initScore(params) {
@@ -29,7 +30,7 @@ export function initScore(params) {
 
     div.innerHTML = `
     <div class="container">
-        <img src="${resultForm} height="90%" width="90%">
+        <img src="${resultForm}" height="300px" width="300px">
 
         <div class="score-board"> 
             <h2>Score</h2>
@@ -37,16 +38,31 @@ export function initScore(params) {
             <p>Pc Score: ${state.getState().history.pcScore}</p>
         </div>
         <custom-button class="return" value="Restart"> </custom-button>
+        <custom-button class="reset" value="Reset Score"> </custom-button>
     </div>`
 
-    const returnButton = div.querySelector(".return");
+    const returnButton = div.querySelector(".return") as Element;
     returnButton.addEventListener("click", el => {
         el.preventDefault();
         background.classList.remove("win");
         background.classList.remove("loose");
         background.classList.remove("tie");
-        params.goTo("/dwf-m5-parcel-server/instructions")
+        params.goTo("/instructions")
+        //params.goTo("/dwf-m5-parcel-server/game")
     });
+
+    const resetButton = div.querySelector(".reset") as Element;
+    resetButton.addEventListener("click", (el) => {
+        el.preventDefault();
+        state.cleanData();
+        state.getStorage();
+        background.classList.remove("win");
+        background.classList.remove("loose");
+        background.classList.remove("tie");
+        params.goTo("/instructions")
+        //params.goTo("/dwf-m5-parcel-server/instructions")
+
+    })
     return div;
 }
 
